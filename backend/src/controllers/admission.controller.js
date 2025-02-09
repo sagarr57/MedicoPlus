@@ -1,4 +1,3 @@
-// controllers/admission.controller.js
 const Admission = require('../models/admission.model');
 const Patient = require('../models/patient.model'); // Import Patient model
 

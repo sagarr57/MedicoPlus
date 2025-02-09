@@ -1,5 +1,4 @@
 const LabRegistration = require('../models/labRegistration.model');
-const { authenticateUser, authorizeRole } = require('../middleware/auth');
 
 // Controller to add a lab registration
 const addLabRegistration = async (req, res) => {

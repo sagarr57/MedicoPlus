@@ -1,5 +1,4 @@
 const DiagnosticResult = require('../models/diagnosticResults.model');
-const { authenticateUser, authorizeRole } = require('../middleware/auth');
 
 // Controller to add a diagnostic result
 const addDiagnosticResult = async (req, res) => {
