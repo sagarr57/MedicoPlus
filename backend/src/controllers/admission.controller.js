@@ -1,5 +1,5 @@
 const Admission = require('../models/admission.model');
-const Patient = require('../models/patient.model'); // Import Patient model
+const Patient = require('../models/patient.model');
 
 // Admit a patient - Only accessible by clerk
 const admitPatient = async (req, res) => {

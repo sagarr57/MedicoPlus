@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
 const Patient = require('./patient.model');
+const Referral = require('./referral.model');  // Reference to Referral model
 
 const labRegistrationSchema = new mongoose.Schema({
   patientID: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Patient', // Linking to the Patient model
+    ref: 'Patient',
     required: true,
+  },
+  referralID: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Referral',  // Linking to the referral
   },
   testType: {
     type: String,

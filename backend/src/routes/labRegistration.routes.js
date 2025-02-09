@@ -8,7 +8,7 @@ const router = express.Router();
 router.post(
   '/add',
   authenticateUser,
-  authorizeRole('Doctor', 'Admin'),
+  authorizeRole('Doctor', 'Admin'), // Role-based authorization
   addLabRegistration
 );
 
@@ -16,7 +16,7 @@ router.post(
 router.get(
   '/:patientID',
   authenticateUser,
-  authorizeRole('Doctor', 'Nurse', 'Admin'),
+  authorizeRole('Doctor', 'Nurse', 'Admin'), // Role-based authorization
   getLabRegistrations
 );
 
