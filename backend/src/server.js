@@ -9,6 +9,9 @@ const referralRoutes = require("./routes/referral.routes");
 const labRegistrationRoutes = require("./routes/labRegistration.routes");
 const diagnosticResultsRoutes = require("./routes/diagnosticResults.routes");
 const roleRoutes = require("./routes/role.routes");
+const treatmentRoutes = require('./routes/treatment.routes');
+const operationTheatreRoutes = require('./routes/operationTheatre.routes');
+const dischargeSummaryRoutes = require('./routes/dischargeSummary.routes');
 
 dotenv.config(); // Initialize dotenv to load environment variables
 
@@ -39,6 +42,9 @@ app.use("/api/referrals", referralRoutes);
 app.use("/api/lab", labRegistrationRoutes);
 app.use("/api/diagnostic-results", diagnosticResultsRoutes);
 app.use("/api/roles", roleRoutes);
+app.use('/api', treatmentRoutes);
+app.use('/api', operationTheatreRoutes);
+app.use('/api', dischargeSummaryRoutes);
 
 // Basic test route
 app.get("/", (req, res) => {
